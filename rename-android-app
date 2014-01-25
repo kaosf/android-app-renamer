@@ -1,5 +1,11 @@
 #! /bin/sh
 
+if [ $# -lt 1 ]
+then
+  echo '1 argument (app-name) is required.' 1>&2
+  exit 1
+fi
+
 sed -e \
   "s/name=\"app_name\">EmptyApp/name=\"app_name\">$1/" \
   res/values/strings.xml -i
