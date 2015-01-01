@@ -2,7 +2,7 @@
 
 if [ $# -lt 1 ]
 then
-  echo '1 argument (app-name) is required.' 1>&2
+  echo '1 argument (app-name) is required.' >&2
   exit 1
 fi
 
